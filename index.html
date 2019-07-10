@@ -97,12 +97,52 @@
                     <div id="sidebar-scroll-alt">
                         <!-- Sidebar Content -->
                         <div class="sidebar-content">
-                            <!-- Sidebar Section -->
-                            <div class="sidebar-section">
-                                <h2 class="text-light">Header</h2>
-                                <p>Section content..</p>
+                            <!-- Profile -->
+                            <div class="sidebar-content">
+                                <h2 class="text-light">Profile</h2>
+                                <form action="index.html" method="post" class="form-control-borderless" onsubmit="return false;">
+                                    <div class="form-group">
+                                        <label for="side-profile-name">Name</label>
+                                        <input type="text" id="side-profile-name" name="side-profile-name" class="form-control"> 
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="side-profile-name">Email</label>
+                                        <input type="email" id="side-profile-name" name="side-profile-name" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="side-profile-password">New Password</label>
+                                        <input type="password" id="side-profile-password" name="side-profile-password" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="side-profile-password-confirm">Confirm New Password</label>
+                                        <input type="password" id="side-profile-password-confirm" name="side-profile-password-confirm" class="form-control">
+                                    </div>
+                                    <div class="form-group remove-margin">
+                                        <button type="submit" class="btn btn-effect-ripple btn-primary" onclick="App.sidebar('close-sidebar-alt');">Save</button>
+                                    </div>
+                                </form>
                             </div>
-                            <!-- END Sidebar Section -->
+                            <!-- End Profile -->    
+                        
+                            <!-- Setting -->
+                            <div class="side-section">
+                                <h2 class="text-light">Settings</h2>
+                                <form action="index.html" method="post" class="form-horizontal form-control-borderless" onsubmit="return false;">
+                                    <div class="form-group">
+                                        <label class="col-xs-7 control-label-fixed">Notifcations</label>
+                                        <div class="col-xs-5">
+                                            <label class="switch switch-success"><input type="checkbox" checked><span></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-xs-7 control-label-fixed">Public Profile</label>
+                                        <div class="col-xs-5">
+                                            <label class="switch switch-success"><input type="checkbox" checked><span></span></label>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- END Settings -->
                         </div>
                         <!-- END Sidebar Content -->
                     </div>
@@ -113,7 +153,12 @@
                 <!-- Main Sidebar -->
                 <div id="sidebar">
                     <!-- Sidebar Brand -->
-                    
+                    <div id="sidebar-brand" class="themed-background">
+                        <a href="index.html" class="sidebar-title">
+                            <i class="fa fa-cube"></i>
+                            <span class="sidebar-nav-mini-hide">Drona<strong>Point</strong></span>
+                        </a>
+                    </div>
                     <!-- END Sidebar Brand -->
 
                     <!-- Wrapper for scrolling functionality -->
@@ -123,21 +168,13 @@
                             <!-- Sidebar Navigation -->
                             <ul class="sidebar-nav">
                                 <li>
-                                    <a href="index.html" class="active"><i class="gi gi-compass sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Dashboard</span></a>
+                                    <a href="index.html" class="active"><i class="gi gi-compass sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Home</span></a>
                                 </li>
                                 <li>
-                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-cog sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Dropdown</span></a>
-                                    <ul>
-                                        <li>
-                                            <a href="javascript:void(0)">Link #1</a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)">Link #2</a>
-                                        </li>
-                                    </ul>
+                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-rocket sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">User Interface</span></a>
                                 </li>
                                 <li>
-                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-cog sidebar-nav-icon"></i><span class="sidebar-nav-mini-hid">Another Box</span></a>
+                                    <a href="#" class="sidebar-nav-menu"><i class="fa fa-chevron-left sidebar-nav-indicator sidebar-nav-mini-hide"></i><i class="fa fa-rocket sidebar-nav-icon"></i><span class="sidebar-nav-mini-hide">Message Board</span></a>
                                 </li>
                             </ul>
                             <!-- END Sidebar Navigation -->                    
@@ -155,7 +192,6 @@
                         </div>
                     </div>
                     <!-- END Sidebar Extra Info -->
-
                 </div>
                 <!-- END Main Sidebar -->
 
@@ -186,24 +222,11 @@
                                 </a>
                             </li>
                             <!-- END Main Sidebar Toggle Button -->
-
-                            <!-- Header Link -->
-                            <li class="hidden-xs animation-fadeInQuick">
-                                <a href=""><strong>Drona Point</strong></a>
-                            </li>
-                            <!-- END Header Link -->
                         </ul>
                         <!-- END Left Header Navigation -->
 
                         <!-- Right Header Navigation -->
                         <ul class="nav navbar-nav-custom pull-right">
-                            <!-- Search Form -->
-                            <li>
-                                <form action="index.html" method="post" class="navbar-form-custom" role="search">
-                                    <input type="text" id="top-search" name="top-search" class="form-control" placeholder="Search..">
-                                </form>
-                            </li>
-                            <!-- END Search Form -->
 
                             <!-- Alternative Sidebar Toggle Button -->
                             <li>
@@ -225,32 +248,19 @@
                                     <li>
                                         <a href="javascript:void(0)">
                                             <i class="fa fa-inbox fa-fw pull-right"></i>
-                                            Link #1
+                                            Profile
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)">
                                             <i class="fa fa-pencil-square fa-fw pull-right"></i>
-                                            Link #2
+                                            Settings
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)">
                                             <i class="fa fa-picture-o fa-fw pull-right"></i>
-                                            Link #3
-                                        </a>
-                                    </li>
-                                    <li class="divider"><li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <i class="gi gi-settings fa-fw pull-right"></i>
-                                            Link #1
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <i class="gi gi-lock fa-fw pull-right"></i>
-                                            Link #2
+                                            Log out
                                         </a>
                                     </li>
                                 </ul>
